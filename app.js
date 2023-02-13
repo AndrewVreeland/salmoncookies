@@ -14,7 +14,7 @@ function randomCust(min, max) {
 function randomCookSale() {
   let cookiesale = 1
   for (i = 0; i < arrOfHours.length; i++) {
-    cookiesale = randomCook();
+    cookiesale = randomCook(1,100);
 
   }
   // ****************** GLOBAL ************************
