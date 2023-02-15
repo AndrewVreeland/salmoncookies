@@ -2,7 +2,7 @@
 
 'use strict';
 // ****************** GLOBAL ************************
-const arrOfHours = ['', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+const arrOfHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 const salesSectionElement = document.getElementById('salesSection');
 
@@ -15,7 +15,7 @@ function randomCust(min, max) {
 }
 
 // ****************** CONSTRUCTOR FUNCTIONS **************
-function StoreLocations(name, minCust, maxCust, avgCookSale) {
+function StoreLocation(name, minCust, maxCust, avgCookSale) {
   this.name = name;
   this.minCust = minCust;
   this.maxCust = maxCust;
@@ -24,13 +24,12 @@ function StoreLocations(name, minCust, maxCust, avgCookSale) {
   this.hourCookSale = [];
 }
 // ******************* OBJECT LITERALS ***********************
-let Seattle = new StoreLocations('seattle', 23, 65, 6.3);
-let tokyo = new StoreLocations('tokyo', 3, 24, 1.2);
-let dubai = new StoreLocations('dubai', 11, 38, 3.7);
-let paris = new StoreLocations('paris', 20, 38, 2.3);
-let lima = new StoreLocations('lima', 2, 16, 4);
-let globalStoreList = [Seattle, tokyo, dubai, paris, lima];
-globalStoreList.push(Seattle);
+let Seattle = new StoreLocation('seattle', 23, 65, 6.3);
+let Tokyo = new StoreLocation('tokyo', 3, 24, 1.2);
+let Dubai = new StoreLocation('dubai', 11, 38, 3.7);
+let Paris = new StoreLocation('paris', 20, 38, 2.3);
+let Lima = new StoreLocation('lima', 2, 16, 4);
+let globalStoreList = [Seattle, Tokyo, Dubai, Paris, Lima];
 // **************** TABLE RENDERING *******************************
 const tableEle = document.createElement('table');
 salesSectionElement.appendChild(tableEle);
@@ -41,8 +40,8 @@ function renderHeader() {
   let thEle = document.createElement('th');
   thEle.textContent = 'Store Location';
   trEle.appendChild(thEle);
-
-  for (let i = 1; i < arrOfHours.length; i++) {
+  
+  for (let i = 0; i < arrOfHours.length; i++) {
     thEle = document.createElement('th');
     thEle.textContent = arrOfHours[i];
     trEle.appendChild(thEle);
@@ -57,32 +56,32 @@ function renderFooter() {
   let foot = document.createElement('tfoot');
   let trEle = document.createElement('tr');
   let thEle = document.createElement('th');
-  let total;
-  
+  let tdEle = document.createElement('td');
   thEle.textContent = 'Totals';
   trEle.appendChild(thEle);
-
-  for (let i = 0; i < globalStoreList.length; i++) {
+  let grandTotal = 0;
+  
+  for (let i = 0; i < arrOfHours.length; i++) {
     let total = 0;
-    for (let j = 0; j < globalStoreList[i].avgCookSale.length; j++) {
-      total += globalStoreList[i].avgCookSale[j];
-      return total;
+    for (let j = 0; j < globalStoreList.length; j++) {
+      total += globalStoreList[j].hourCookSale[i];
+      console.log(globalStoreList[j].hourCookSale[i]);
     }
-  }
-  for (let i = 2; i < arrOfHours.length; i++){
     thEle = document.createElement('th');
     thEle.textContent = total;
     trEle.appendChild(thEle);
+    grandTotal += total;
   }
-  thEle = document.createElement('th');
-  thEle.textContent = total;
-  trEle.appendChild(thEle);
   foot.appendChild(trEle);
   tableEle.appendChild(foot);
+  tdEle = document.createElement('td');
+  trEle.appendChild(tdEle);
+  tdEle.textContent = `${grandTotal}`;
+  console.log(grandTotal);
 }
 
 // ************************* PROTOTYPE METHODS *********************
-StoreLocations.prototype.getCookies = function () {
+StoreLocation.prototype.getCookies = function () {
   for (let i = 0; i < arrOfHours.length; i++) {
     let hourlyCust = randomCust(this.minCust, this.maxCust);
     let hourlyCookies = Math.floor(hourlyCust * this.avgCookSale);
@@ -91,13 +90,13 @@ StoreLocations.prototype.getCookies = function () {
   }
 };
 
-StoreLocations.prototype.render = function () {
+StoreLocation.prototype.render = function () {
   const trEle = document.createElement('tr');
   tableEle.appendChild(trEle);
   const thEle = document.createElement('th');
   trEle.appendChild(thEle);
   thEle.textContent = this.name;
-  for (let i = 1; i < this.hourCookSale.length; i++) {
+  for (let i = 0; i < this.hourCookSale.length; i++) {
     const tdEle = document.createElement('td');
     trEle.appendChild(tdEle);
     tdEle.textContent = this.hourCookSale[i];
@@ -110,14 +109,14 @@ StoreLocations.prototype.render = function () {
 // ***************** EXECUTABLE CODE ********************
 Seattle.getCookies();
 Seattle.render();
-tokyo.getCookies();
-tokyo.render();
-dubai.getCookies();
-dubai.render();
-paris.getCookies();
-paris.render();
-lima.getCookies();
-lima.render();
+Tokyo.getCookies();
+Tokyo.render();
+Dubai.getCookies();
+Dubai.render();
+Paris.getCookies();
+Paris.render();
+Lima.getCookies();
+Lima.render();
 renderHeader();
 renderFooter();
 function renderAll() {
