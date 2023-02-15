@@ -30,7 +30,6 @@ let dubai = new StoreLocations('dubai', 11, 38, 3.7);
 let paris = new StoreLocations('paris', 20, 38, 2.3);
 let lima = new StoreLocations('lima', 2, 16, 4);
 let globalStoreList = [Seattle, tokyo, dubai, paris, lima];
-globalStoreList.push(Seattle);
 // **************** TABLE RENDERING *******************************
 const tableEle = document.createElement('table');
 salesSectionElement.appendChild(tableEle);
