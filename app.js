@@ -57,6 +57,7 @@ function renderFooter() {
   let foot = document.createElement('tfoot');
   let trEle = document.createElement('tr');
   let thEle = document.createElement('th');
+  let total;
   
   thEle.textContent = 'Totals';
   trEle.appendChild(thEle);
