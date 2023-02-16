@@ -10,15 +10,23 @@ header {
   padding: 50px 0px 00px 00px;
   background-color: black;
   width: 70%;
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
   margin: 3% 0% 1% 15%;
 }
 #headerDiv {
-  padding: 0px 0px 0px -50px;
+  padding: 0px 0px 0px 0px;
   background-color: #013026;
-  width: 200%;
-  margin-right: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#headerDiv1{
+  display: flex;
+  justify-content: center;
+  /* width: 200%; */
+  margin-left: 100px;
+  font-family: "Trirong", serif;
 }
 h1 {
   color: #a1ce3f;
@@ -43,11 +51,29 @@ th{
 }
 
 #salesSection{
+border:#013026 5px solid;
+}
+#tableBackground{
   background-color: black;
   width: 70%;
   display: flex;
   justify-content: center;
   margin: 3% 0% 1% 15%;
-  padding: 130px 0px 130px 0px;
+  padding: 100px 0px 100px 0px;
+}
+#tableSales{
+  margin: 0% 0% 0% 35%;
+  text-align: center;
+}
+a{
+  color: #a1ce3f;
+  text-align: center;
+  font-family: "Trirong", serif;
 }
 
+h2{
+  color: #a1ce3f;
+  font-size: 200%;
+  display: flex;
+  font-family: "Trirong", serif;
+}
