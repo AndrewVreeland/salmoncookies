@@ -1,6 +1,37 @@
+body {
+  background: url(../img/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+header {
+  
+  padding: 50px 0px 00px 00px;
+  background-color: black;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin: 3% 0% 1% 15%;
+}
+#headerDiv {
+  padding: 0px 0px 0px -50px;
+  background-color: #013026;
+  width: 200%;
+  margin-right: 100%;
+}
+h1 {
+  color: #a1ce3f;
+  font-size: 300%;
+  display: flex;
+  justify-content: center;
+  padding: 00px 00px 50px 0px;
+}
 table{
   border: 2px solid black;
-  padding: 5px
+  padding: 5px;
+  background-color: #014760;
+  color: #a1ce3f;
 }
 td{
   border: 2px solid black;
@@ -10,3 +41,13 @@ th{
   border: 2px solid black;
   padding: 5px;
 }
+
+#salesSection{
+  background-color: black;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin: 3% 0% 1% 15%;
+  padding: 130px 0px 130px 0px;
+}
+
