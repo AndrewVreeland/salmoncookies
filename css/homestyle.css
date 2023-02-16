@@ -1,0 +1,154 @@
+header {
+  
+  padding: 50px 0px 00px 00px;
+  background-color: black;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin: 3% 0% 1% 15%;
+}
+
+body {
+  background: url(../img/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+;
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  color: #a1ce3f;
+}
+
+h1 {
+  color: #a1ce3f;
+  font-size: 300%;
+  display: flex;
+  justify-content: center;
+  padding: 00px 00px 50px 0px;
+}
+
+#h2-1{
+  color: #a1ce3f;
+  font-size: 200%;
+  display: flex;
+  padding: 0px 00px 0px 0px;
+  height: 7%;
+  width: 50%;
+  margin: 50px 0px 0px 770px; 
+}
+#headerDiv {
+  padding: 50px 100px 0px -50px;
+  background-color: #013026;
+  width: 100%;
+  display: flex;
+  justify-content: space-between
+}
+
+#bodyDiv1 {
+  background-color: black;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 00px 60px 0px;
+}
+
+#salesLink {
+  color: #a1ce3f;
+}
+
+#img1 {
+  width: 15%;
+  height: 80%;
+}
+#familyDiv{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#familyTextDiv{
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  margin-top: 55px;
+  margin-right: 65px;
+  width: 600px;
+  height: 150px;
+  background-color: #014760;
+}
+#img2 {
+  width: 41%;
+  /* border-radius: 5000px; */
+  padding-left: 50px;
+}
+#bodyDiv2{
+  background-color: black;
+  width: 70%;
+  margin: 3% 0% 0% 15%;
+  display: flex;
+  /* justify-content: space-between; */
+}
+#h2-2{
+  color: #a1ce3f;
+  font-size: 200%;
+  padding: 0px 0px 0px 770px;
+  margin: 50px 0px 0px 0px;
+}
+#img3{
+  padding: 0px 0px 50px 50px ;
+  margin-left: 0px;
+  margin-bottom: 0px ;
+}
+#img4{
+width: 100px;
+height: 70px;
+}
+#img5{
+width: 100px;
+height: 100px;
+}
+#bakeDivMaster{
+  width: 100%;
+}
+#badDivHead{
+  display: flex;
+  justify-content: space-evenly;
+}
+#bakeDiv{
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+#bakeTextDiv{
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  margin: 50px 0px 0px 0px;
+  width: 600px;
+  height: 150px;
+  background-color: #014760;
+}
+
+#bodyDiv3{
+  background-color: black;
+  width: 70%;
+  margin: 3% 0% 2% 15%;
+  display: flex;
+}
+#freeShirtDiv{
+  display: flex;
+}
+#p2{
+  margin-left: 1018px;
+}
