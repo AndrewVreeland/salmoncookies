@@ -77,3 +77,22 @@ h2{
   display: flex;
   font-family: "Trirong", serif;
 }
+
+#myForm{
+  background-color: #014760;
+  color: #a1ce3f;
+  width: 50%;
+}
+fieldset{
+  /* border: black solid 2px; */
+  width: 30%
+}
+
+label{
+  /* border: black solid 2px; */
+  margin: 10px;
+}
+
+input{
+  /* border: black solid 2px; */
+}

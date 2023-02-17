@@ -17,9 +17,32 @@
   </header>
   
   <main>
-    
+    <div id="tableBackground">
+
+      <form id = 'myForm'>
+        <fieldset>
+          <legend> First Fieldset Header </legend>
+          <!-- Inputs and labels-->
+          <!--Option 1: INputs and labels are siblings-->
+          <!-- important lavel must have a for attribute and the input will have a matching id attribute-->
+          <label>New City Location
+            <input  type="text"  name="name" required>
+          </label>
+          <!--OPTION @: IS TO NEST THE INPUT INSIDE OF YOUR LABEL-->
+        <label>Minimum Customer Amount:
+            <input type="number" name="minCust" required>
+          </label>
+    <label>Maximum Customer Amount:
+    <input type="number" name="maxCust" required>
+    </label>
+    <label>Average Hourly Cookie Sales:
+      <input type="number" name="avgCookSale" required>
+    </label>
+        </fieldset>
+        <button type="submit">submit</button>
+      </form>
+    </div>
   <div id="tableBackground"> <div> <h2 id="tableSales">Table Sales Data</h2><section id="salesSection"> </section> </div></div>
-  
 </main>
   <script src="app.js"></script>
 </body>

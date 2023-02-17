@@ -40,7 +40,7 @@ function renderHeader() {
   let thEle = document.createElement('th');
   thEle.textContent = 'Store Location';
   trEle.appendChild(thEle);
-  
+
   for (let i = 0; i < arrOfHours.length; i++) {
     thEle = document.createElement('th');
     thEle.textContent = arrOfHours[i];
@@ -60,7 +60,7 @@ function renderFooter() {
   thEle.textContent = 'Totals';
   trEle.appendChild(thEle);
   let grandTotal = 0;
-  
+
   for (let i = 0; i < arrOfHours.length; i++) {
     let total = 0;
     for (let j = 0; j < globalStoreList.length; j++) {
@@ -106,6 +106,44 @@ StoreLocation.prototype.render = function () {
   trEle.appendChild(tdEle);
 };
 
+//******************Form and Event listener *************
+// min cust max cust 
+// TODO: Step 1 Grab the element I want to listen to
+let myForm = document.getElementById('myForm');
+// TODO set variables
+function handleFormSubmit(event) {
+  // ON ANY FORM HANDLER
+  event.preventDefault();
+  console.log('Form Submitted');
+}
+// REMOVE FOOTER
+// TODO Create new city
+myForm.addEventListener('submit',
+  function (event) {
+    event.preventDefault();
+    const name = event.target.name.value;
+    const minCust = +event.target.minCust.value;
+    const maxCust = +event.target.maxCust.value;
+    const avgCookSale = +event.target.avgCookSale.value;
+    function myFormReset() {
+      myForm.reset();
+    }
+    // Element.remove(renderFooter);
+    const newCityLocation = new StoreLocation(name, minCust, maxCust, avgCookSale);
+    // renderFooter();
+
+    newCityLocation.getCookies();
+    newCityLocation.render();
+
+
+    // this.insertBefore(myForm1().reset());
+    // RE ADD FOOTER
+    myFormReset();
+  }
+);
+
+//TODO ATTATCH MY EVENT LISTENER
+myForm.addEventListener('submit', handleFormSubmit);
 // ***************** EXECUTABLE CODE ********************
 Seattle.getCookies();
 Seattle.render();
@@ -119,9 +157,7 @@ Lima.getCookies();
 Lima.render();
 renderHeader();
 renderFooter();
-function renderAll() {
-  for (let i = 0; i < globalStoreList.length; i++) console.log('hello');
-}
+
 // Seattle.render();
 // renderAll();
 // seattle.getNumOfCook();
