@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
@@ -8,42 +9,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <header>
-    <div> <div id="headerdiv1"><h1>Welcome to the Salmon Shack</h1></div>
-    
-    <div id="headerDiv"><a id="salesLink" href="index.html">Home Page</a></div>
-  </div>
+    <div>
+      <div id="headerdiv1">
+        <h1>Welcome to the Salmon Shack</h1>
+      </div>
+
+      <div id="headerDiv"><a id="salesLink" href="index.html">Home Page</a></div>
+    </div>
   </header>
-  
+
   <main>
+
     <div id="tableBackground">
 
-      <form id = 'myForm'>
-        <fieldset>
-          <legend> First Fieldset Header </legend>
+      <div>
+        <h2 id="tableSales">Table Sales Data</h2>
+        <section id="salesSection"> </section>
+      </div>
+
+      <form id='myForm'>
+        <fieldset id='myForm1'>
+          <!-- <legend>  </legend> -->
           <!-- Inputs and labels-->
           <!--Option 1: INputs and labels are siblings-->
           <!-- important lavel must have a for attribute and the input will have a matching id attribute-->
-          <label>New City Location
-            <input  type="text"  name="name" required>
+          <label> <p id="text"> New City Locations: </p>
+            <input type="text" name="name" required>
           </label>
           <!--OPTION @: IS TO NEST THE INPUT INSIDE OF YOUR LABEL-->
-        <label>Minimum Customer Amount:
+          <label> <p id="text">Minimum Customers: </p>
             <input type="number" name="minCust" required>
           </label>
-    <label>Maximum Customer Amount:
-    <input type="number" name="maxCust" required>
-    </label>
-    <label>Average Hourly Cookie Sales:
-      <input type="number" name="avgCookSale" required>
-    </label>
+          <label> <p id="text">Maximum Customers: </p>
+            <input type="number" name="maxCust" required>
+          </label>
+          <label> <p id="text"> Hourly Cookie Sales: </p>
+            <input type="number" name="avgCookSale" required>
+          </label>
         </fieldset>
         <button type="submit">submit</button>
       </form>
+
     </div>
-  <div id="tableBackground"> <div> <h2 id="tableSales">Table Sales Data</h2><section id="salesSection"> </section> </div></div>
-</main>
+  </main>
   <script src="app.js"></script>
 </body>
 

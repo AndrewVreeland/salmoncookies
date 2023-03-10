@@ -6,7 +6,6 @@ body {
   background-size: cover;
 }
 header {
-  
   padding: 50px 0px 00px 00px;
   background-color: black;
   width: 70%;
@@ -21,7 +20,7 @@ header {
   display: flex;
   justify-content: center;
 }
-#headerDiv1{
+#headerDiv1 {
   display: flex;
   justify-content: center;
   /* width: 200%; */
@@ -35,64 +34,81 @@ h1 {
   justify-content: center;
   padding: 00px 00px 50px 0px;
 }
-table{
+table {
   border: 2px solid black;
   padding: 5px;
   background-color: #014760;
   color: #a1ce3f;
 }
-td{
+td {
   border: 2px solid black;
   padding: 5px;
 }
-th{
+th {
   border: 2px solid black;
   padding: 5px;
 }
 
-#salesSection{
-border:#013026 5px solid;
+#salesSection {
+  border: #013026 5px solid;
+  width: fit-content;
+  margin-left: 120px;
 }
-#tableBackground{
+#tableBackground {
   background-color: black;
   width: 70%;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   margin: 3% 0% 1% 15%;
   padding: 100px 0px 100px 0px;
 }
-#tableSales{
+#tableSales {
   margin: 0% 0% 0% 35%;
   text-align: center;
 }
-a{
+a {
   color: #a1ce3f;
   text-align: center;
   font-family: "Trirong", serif;
 }
 
-h2{
+h2 {
   color: #a1ce3f;
   font-size: 200%;
   display: flex;
   font-family: "Trirong", serif;
 }
 
-#myForm{
-  background-color: #014760;
+#myForm {
+  /* background-color: #014760; */
   color: #a1ce3f;
   width: 50%;
+  /* display: flex; */
 }
-fieldset{
+#myForm1 {
+  display: flex;
+  justify-content: space-around;
+}
+fieldset {
   /* border: black solid 2px; */
-  width: 30%
+  width: 30%;
 }
 
-label{
+label {
   /* border: black solid 2px; */
-  margin: 10px;
+  margin-top: 10px;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  height: 20px;
+  margin-left: -30px;
+  
 }
 
-input{
+
+
+input {
   /* border: black solid 2px; */
+  width: 50px;
+  margin-left: -100px;
 }

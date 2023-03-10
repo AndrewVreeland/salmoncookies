@@ -128,7 +128,7 @@ myForm.addEventListener('submit',
     function myFormReset() {
       myForm.reset();
     }
-    // Element.remove(renderFooter);
+
     const newCityLocation = new StoreLocation(name, minCust, maxCust, avgCookSale);
     // renderFooter();
     document.querySelector('tfoot').remove();
@@ -137,8 +137,7 @@ myForm.addEventListener('submit',
     globalStoreList.push(newCityLocation);
     renderFooter();
 
-    // this.insertBefore(myForm1().reset());
-    // RE ADD FOOTER
+
     myFormReset();
   }
 );
